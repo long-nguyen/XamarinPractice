@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="testxamarin.SecondPage" Title="Second page">
+	<ContentPage.Content>
+		<ScrollView>
+			<RelativeLayout BackgroundColor="Aqua">
+				<BoxView x:Name="TopLayout" 
+					Color="Gray"
+					HeightRequest="100"
+					RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" />
+				<RelativeLayout
+						BackgroundColor="Yellow"
+						RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=TopLayout,Property=Height,Factor=1}"
+						RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+						RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height,Factor = 1, Constant = -70 }">
+					<Label 	
+						x:Name="usernameLbl"
+						TextColor="Black"
+						Text="User Name"
+						XAlign="Center"
+						RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y,Factor=0,Constant=55}"
+						RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=1}"/>
+					<StackLayout
+							RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=usernameLbl, Property=Y,Factor=1,Constant=55}" 
+							RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=1}"
+							Padding="5"
+							BackgroundColor="White"
+							HeightRequest="50"
+							Orientation="Horizontal"
+							>
+						<Image 
+							BackgroundColor="Aqua"
+							WidthRequest="50"
+							x:Name="avaImg"
+							Aspect="AspectFill"
+							/>
+						<Label 
+							x:Name="avaname"
+							Text="Sample text aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+							HorizontalOptions="FillAndExpand"
+							VerticalTextAlignment="Center"
+							BackgroundColor="Aqua"
+							TextColor="White"
+
+							/>
+						
+					</StackLayout>
+				</RelativeLayout>
+
+				<Button 
+					BorderRadius="35"
+					x:Name="imageCircleBack"
+					BackgroundColor="Maroon"
+					HeightRequest="70"
+					WidthRequest="70"
+					Clicked="OnOvalClicked"
+					RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width, Factor=.5, Constant = -35}"
+					RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Factor=0, Property=Y, Constant=70}" />
+			</RelativeLayout>
+		</ScrollView>
+	</ContentPage.Content>
+</ContentPage>

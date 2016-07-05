@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		Title="List Page"
+		x:Class="testxamarin.ListPage">
+<StackLayout Padding="5">
+	<ListView x:Name="personList"
+		RowHeight="80"
+		CachingStrategy="RecycleElement"
+		SeparatorVisibility="None">
+		<ListView.ItemTemplate>
+			<DataTemplate>
+				<ViewCell>
+					<StackLayout 
+						Orientation="Horizontal"
+						Padding="5">
+						<!-- Dữ liệu rất ảo, cứ Binding + tên trường được set, là hiển thị được -->
+						<Image Source="{Binding Avatar}" 
+							HeightRequest="50"
+							WidthRequest="50"
+							/>
+						<StackLayout Orientation="Vertical"
+							HorizontalOptions="StartAndExpand">
+							<Label FontSize="20" FontAttributes="Bold" Text="{Binding Name}"></Label>
+							<Label FontSize="12" Text="{Binding Age}"></Label>
+							<Label FontSize="12" Text="{Binding Location}"></Label>
+						</StackLayout>
+						<!-- Thêm command parameter để gửi được item data lên sự kiện click -->
+						<Button Text="Click me"
+							Clicked="onItemButtonClick"
+							CommandParameter="{Binding .}"
+							/>
+					</StackLayout>
+				</ViewCell>
+			</DataTemplate>
+		</ListView.ItemTemplate>
+	</ListView>
+</StackLayout>
+</ContentPage>

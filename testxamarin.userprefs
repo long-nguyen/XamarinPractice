@@ -1,0 +1,15 @@
+﻿<Properties StartupItem="iOS/testxamarin.iOS.csproj" NuGet.AddPackagesDialog.IncludePrerelease="True">
+  <MonoDevelop.Ide.Workbench ActiveDocument="testxamarin/Sources/Modules/HomePage.cs">
+    <Files>
+      <File FileName="testxamarin/Modules/CachedListView.cs" Line="10" Column="4" />
+      <File FileName="testxamarin/testxamarin.cs" Line="17" Column="4" />
+      <File FileName="testxamarin/Sources/Modules/HomePage.cs" Line="108" Column="18" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.testxamarin.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.446D4905-D1CF-4534-94D9-7D0F314FE2C8" />
+</Properties>
